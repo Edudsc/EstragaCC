@@ -8,6 +8,7 @@ using PW_2018_TP.Models;
 
 namespace PW_2018_TP.Models
 {
+    [Table("ClassificaCliente")]
     public class ClassifCliente
     {
         [Key]
@@ -16,6 +17,10 @@ namespace PW_2018_TP.Models
         public int ParticularId { get; set; }
 
         public Particular Particular{get;set;}
+
+        public int CritClienteId { get; set; }
+
+        public Critcliente Critcliente { get; set; }
 
         public ClassifCliente()
         {

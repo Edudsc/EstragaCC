@@ -8,6 +8,7 @@ using PW_2018_TP.Models;
 
 namespace PW_2018_TP.Models
 {
+    [Table("CondicoesdeAluguer")]
     public class CondAlugar
     {
         [Key]

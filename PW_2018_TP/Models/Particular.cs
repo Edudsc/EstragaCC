@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 using PW_2018_TP.Models;
 
 namespace PW_2018_TP.Models
 {
+    [Table("Particulares")]
     public class Particular
     {
         [Key]
@@ -37,8 +39,9 @@ namespace PW_2018_TP.Models
         [EmailAddress]
         public string Email { get; set; }
 
-        [Phone]
+        
         [Display(Name = "Telefone")]
+        [Phone]
         public int Tel { get; set; }
 
         //tem avaliação como cliente
@@ -60,6 +63,8 @@ namespace PW_2018_TP.Models
         public IList<Zonas> Zonases { get; set; }
 
         //adicionar aqui uma lista de mensagens?
+        public IList<Mensagem> Mensagens { get; set; }
+
 
         public Particular()
         {
